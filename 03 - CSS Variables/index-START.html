@@ -27,6 +27,16 @@
       --blur: 10px;
     }
 
+    img{
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .h1{
+      color: var(--base);
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -50,6 +60,15 @@
   </style>
 
   <script>
+
+  const inputs = document.querySelectorAll('.controls input')
+
+  function handleUpdate(){
+    console.log(this.value);
+  };
+
+
+  inputs.forEach(input => input.addEventListener('change',handleUpdate))
   </script>
 
 </body>
