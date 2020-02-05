@@ -19,8 +19,10 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities = [];
 
-const prom = fetch(endpoint);
-console.log(prom);
+fetch(endpoint)
+.then(blob => blob.json())
+.then(data => console.log(data));
+
 </script>
   </body>
 </html>
